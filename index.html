@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BijakEnergi- Kampanye Hemat Energi Sekolah</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header id="navbar">
+        <div class="navbar-isi">
+            <div class="logo">BijakEnergi<span>HEMAT ENERGI</span></div>
+    
+            <nav class="menu-besar">
+                <button id="navBeranda" onclick="tampilkanHalaman('beranda')">Beranda</button>
+                <button id="navTentang" onclick="tampilkanHalaman('tentang')">Tentang Proyek</button>
+                <button id="navData" onclick="tampilkanHalaman('data')">Data & Fakta</button>
+                <button id="navAksi" onclick="tampilkanHalaman('aksi')">Aksi Nyata</button>
+            </nav>
+    
+            <button class="tombol-hp" onclick="bukaTutupMenu()">&#9776;</button>
+        </div>
+    
+        <div id="menuMobile">
+            <button onclick="tampilkanHalaman('beranda'); bukaTutupMenu()">Beranda</button>
+            <button onclick="tampilkanHalaman('tentang'); bukaTutupMenu()">Tentang Proyek</button>
+            <button onclick="tampilkanHalaman('data'); bukaTutupMenu()">Data & Fakta</button>
+            <button onclick="tampilkanHalaman('aksi'); bukaTutupMenu()">Aksi Nyata</button>
+        </div>
+    </header>
+
+    <main class="wadah">
+
+        <section id="beranda">
+
+            <div class="hero">
+                <span class="hero-label">Kampanye ESD - Education for Sustainable Development</span>
+                <h1>Matikan yang Tak Perlu, <span class="kuning">Selamatkan Bumi</span></h1>
+                <p>Langkah kecil dari lingkungan sekolah kita hari ini menentukan keberlanjutan energi untuk esok hari.
+                    Mari bersama menjadi pelopor perubahan penggunaan energi secara bijak.</p>
+                <button class="tombol-hijau" onclick="tampilkanHalaman('tentang')">Pelajari Kampanye Ini</button>
+                <button class="tombol-putih-transparan" onclick="tampilkanHalaman('data')">Lihat Rencana Data</button>
+            </div>
+
+            <div class="dua-kolom">
+                <div class="kolom-besar kartu">
+                    <div class="ikon-lingkaran">💡</div>
+                    <h2 style="font-size:20px; color:#1e293b; margin-bottom:10px;">Mengapa Kampanye Ini Penting?</h2>
+                    <p style="font-size:14px; margin-bottom:10px;">Sebagian besar listrik yang kita gunakan di
+                        lingkungan sekolah masih berasal dari pembangkit listrik berbahan bakar fosil. Setiap kilowatt
+                        listrik yang terbuang percuma saat kipas, AC, atau lampu menyala di kelas kosong ikut menyumbang
+                        pemborosan energi.</p>
+                    <p style="font-size:14px;">Website kampanye ini hadir sebagai media ajakan agar seluruh warga
+                        sekolah bertindak bijak berdasarkan fakta dan data nyata.</p>
+                </div>
+
+                <div class="kolom-kecil kartu-komitmen">
+                    <div>
+                        <span style="font-size:11px; font-weight:700; letter-spacing:1px;">AKSI CEPAT WARGA
+                            SEKOLAH</span>
+                        <h3 style="font-size:18px; margin-top:6px;">Dukung Hemat Energi Hari Ini!</h3>
+                        <p style="font-size:13px; margin-top:8px;">Tekan tombol di bawah untuk menyatakan komitmenmu
+                            mematikan listrik yang tidak terpakai.</p>
+                    </div>
+                    <div class="kotak-jumlah">
+                        <span style="font-size:11px;">Total Komitmen Terkumpul</span>
+                        <span id="jumlahKomitmen">128</span>
+                        <span style="font-size:11px;">Siswa &amp; Guru</span>
+                    </div>
+                    <button id="tombolKomitmen" onclick="tambahKomitmen()">Saya Berkomitmen!</button>
+                </div>
+            </div>
+
+
+            <div class="judul-tengah">
+                <h2>Tujuan Utama Kampanye</h2>
+                <p>Empat pilar utama yang ingin kita capai bersama di sekolah</p>
+            </div>
+
+            <div class="grid-tujuan">
+                <div class="kartu-tujuan">
+                    <div class="nomor-tujuan">01</div>
+                    <h3>Edukasi &amp; Kesadaran</h3>
+                    <p>Menumbuhkan pemahaman pentingnya konservasi energi bagi keberlanjutan lingkungan.</p>
+                </div>
+                <div class="kartu-tujuan">
+                    <div class="nomor-tujuan">02</div>
+                    <h3>Perubahan Kebiasaan</h3>
+                    <p>Mendorong kebiasaan mematikan lampu, AC, dan alat elektronik saat tidak digunakan.</p>
+                </div>
+                <div class="kartu-tujuan">
+                    <div class="nomor-tujuan">03</div>
+                    <h3>Aksi berbasis Data</h3>
+                    <p>Menyajikan bukti survei dan observasi nyata agar ajakan tepat sasaran.</p>
+                </div>
+                <div class="kartu-tujuan">
+                    <div class="nomor-tujuan">04</div>
+                    <h3>Kolaborasi Sekolah</h3>
+                    <p>Melibatkan lintas mata pelajaran serta seluruh warga sekolah secara aktif.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="tentang" style="display:none;">
+
+            <div class="judul-halaman">
+                <h1>Tentang Proyek Kampanye</h1>
+                <p>Inisiatif ESD (Education for Sustainable Development) Lintas Mata Pelajaran</p>
+            </div>
+
+            <div class="kartu" style="margin-bottom:20px;">
+                <h2 style="font-size:18px; color:#15803d; margin-bottom:10px;">Latar Belakang Pembuatan Website</h2>
+                <p style="font-size:14px; margin-bottom:10px;">Website ini tidak dibuat sekadar untuk menyampaikan
+                    laporan formal, melainkan sebagai alat kampanye aktif. Kami percaya bahwa perubahan perilaku berawal
+                    dari kesadaran yang dibangun lewat informasi yang menarik, mudah dipahami, serta berbasis data
+                    lapangan.</p>
+                <p style="font-size:14px;">Proyek ini memadukan konsep keberlanjutan lingkungan dengan keterampilan
+                    teknologi digital, mengolah data observasi penggunaan energi sekolah menjadi pesan ajakan yang
+                    menggerakkan warga sekolah.</p>
+            </div>
+
+            <h2 style="font-size:18px; color:#1e293b; margin-bottom:6px;">Kolaborasi Lintas Mata Pelajaran</h2>
+            <div class="grid-mapel">
+                <div class="kotak-mapel"><span class="nama-mapel">PABP</span><span class="ket-mapel">Tanggung Jawab
+                        Moral</span></div>
+                <div class="kotak-mapel"><span class="nama-mapel">KIK</span><span class="ket-mapel">Kreativitas &amp;
+                        Inovasi</span></div>
+                <div class="kotak-mapel"><span class="nama-mapel">PP</span><span class="ket-mapel">Kesadaran
+                        Warga</span></div>
+                <div class="kotak-mapel"><span class="nama-mapel">Matematika</span><span class="ket-mapel">Pengolahan
+                        Data</span></div>
+                <div class="kotak-mapel"><span class="nama-mapel">B. Indonesia</span><span class="ket-mapel">Bahasa
+                        Persuasif</span></div>
+                <div class="kotak-mapel"><span class="nama-mapel">Informatika</span><span class="ket-mapel">Pengembangan
+                        Web</span></div>
+            </div>
+
+            <div class="kartu" style="margin-top:25px;">
+                <h2 style="font-size:18px; color:#1e293b; margin-bottom:14px;">Identitas Tim Pengembang</h2>
+                <div class="dua-kolom" style="margin-top:0;">
+                    <div class="kolom-kecil" style="background-color:#f8fafc; border-radius:12px; padding:16px;">
+                        <span style="font-size:11px; font-weight:700; color:#94a3b8;">INFORMASI KELOMPOK</span>
+                        <table>
+                            <tr>
+                                <td>Nama Kelompok</td>
+                                <td class="kanan">Kelompok 03</td>
+                            </tr>
+                            <tr>
+                                <td>Kelas / Jurusan</td>
+                                <td class="kanan">PPLG XI-1</td>
+                            </tr>
+                            <tr>
+                                <td>Target Selesai Fase 1</td>
+                                <td class="kanan" style="color:#15803d;">Kamis, 24 Sept 2026</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="kolom-kecil" style="background-color:#f8fafc; border-radius:12px; padding:16px;">
+                        <span style="font-size:11px; font-weight:700; color:#94a3b8;">ANGGOTA TIM</span>
+                        <table>
+                            <tr>
+                                <td>1.Mulya Putri Nur Andita dewi</td>
+                                <td class="kanan" style="font-weight:400; font-size:11px;">Desain &amp; Frontend</td>
+                            </tr>
+                            <tr>
+                                <td>2. Andini Ayuwandari</td>
+                                <td class="kanan" style="font-weight:400; font-size:11px;">Konten &amp; Narasi</td>
+                            </tr>
+                            <tr>
+                                <td>3. Adrian Herliansyah Ramadhan</td>
+                                <td class="kanan" style="font-weight:400; font-size:11px;">Pengolahan Data</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="data" style="display:none;">
+        
+            <div class="judul-halaman">
+                <h1>Data & Fakta Perilaku Hemat Energi <span class="label-fase">Fase 2</span></h1>
+                <p>Bukti nyata hasil angket perilaku hemat energi siswa.</p>
+            </div>
+        
+            <div class="kartu">
+                <h2>Hasil Kuesioner Perilaku Hemat Energi</h2>
+                <p>Data berdasarkan hasil kuesioner yang diikuti oleh 636 siswa.</p>
+
+                <div class="ringkasan-data">
+                    <div>
+                        <h3>636</h3>
+                        <p>Jumlah Responden</p>
+                    </div>
+                
+                    <div>
+                        <h3>3,36</h3>
+                        <p>Rata-rata Skor</p>
+                    </div>
+                
+                    <div>
+                        <h3>90,79%</h3>
+                        <p>Rata-rata Perilaku Sering Dilakukan</p>
+                    </div>
+                </div>
+        
+                <canvas id="grafikPerilaku"></canvas>
+
+                <p>
+                    Berdasarkan hasil kuesioner terhadap 636 siswa, sebanyak
+                    378 siswa (59,4%) memiliki perilaku hemat energi dalam
+                    kategori Sangat Baik. Hal ini menunjukkan bahwa sebagian
+                    besar siswa sudah memiliki kebiasaan hemat energi yang baik.
+                </p>
+
+                <h3>Perbandingan Perilaku Hemat Energi Siswa</h3>
+                
+                <canvas id="grafikRataRata"></canvas>
+                
+                <p>
+                    Grafik ini membandingkan tiga perilaku hemat energi dengan
+                    rata-rata tertinggi dan tiga perilaku dengan rata-rata terendah
+                    berdasarkan hasil kuesioner.
+                </p>
+            </div>
+        
+        </section>
+
+        <section id="aksi" style="display:none;">
+
+            <div class="judul-halaman">
+                <h1>Aksi &amp; Rekomendasi Hemat Energi <span class="label-fase">Fase 3</span></h1>
+                <p>Langkah sederhana yang bisa mulai dilakukan warga sekolah sehari-hari.</p>
+            </div>
+
+            <p style="font-size:14px; margin-bottom:16px;">Rekomendasi lengkap dan spesifik akan disusun setelah data
+                Fase 2 selesai dianalisis. Sebagai gambaran awal, berikut beberapa contoh kebiasaan hemat energi yang
+                bisa mulai diterapkan:</p>
+
+            <div class="daftar-aksi">
+                <div class="item-aksi">
+                    <span class="emoji-aksi">💡</span>
+                    <div>
+                        <h3>Matikan Lampu Saat Ruangan Kosong</h3>
+                        <p>Pastikan lampu kelas dimatikan saat istirahat atau tidak ada kegiatan.</p>
+                    </div>
+                </div>
+                <div class="item-aksi">
+                    <span class="emoji-aksi">🔌</span>
+                    <div>
+                        <h3>Cabut Charger yang Tidak Dipakai</h3>
+                        <p>Charger yang tetap tertancap tetap menyerap listrik meski tidak sedang mengisi daya.</p>
+                    </div>
+                </div>
+                <div class="item-aksi">
+                    <span class="emoji-aksi">❄️</span>
+                    <div>
+                        <h3>Gunakan AC/Kipas Secukupnya</h3>
+                        <p>Atur suhu AC secara wajar dan matikan saat ruangan sudah sepi.</p>
+                    </div>
+                </div>
+                <div class="item-aksi">
+                    <span class="emoji-aksi">🖥️</span>
+                    <div>
+                        <h3>Matikan Komputer/Proyektor Setelah Dipakai</h3>
+                        <p>Jangan biarkan perangkat elektronik menyala dalam keadaan standby terlalu lama.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <strong>Proyek ESD Kampanye Hemat Energi</strong> &mdash; Tahun 2026<br>
+        Dibuat menggunakan HTML, CSS, dan JavaScript sederhana.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
